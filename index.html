@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restuarant</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/imgs">
 </head>
 
 <body>
@@ -16,83 +16,55 @@
         <main>
             <section class="s1">
                 <h1>Indian Food</h1>
-                <div class="container">
-                    <div class="d d1">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/indian/biryani.jpg" alt="biryani">
-                    </div>
-                    <div class="d d2">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/indian/butter_chicken.jpg"
-                            alt="butter_chicken">
-                    </div>
-                    <div class="d d3">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/indian/chickpeas.jpg"
-                            alt="chickpeas">
-                    </div>
-                    <div class="d d4">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/indian/samosa.jpg" alt="samosa">
-                    </div>
+                <div class="container container_1">
                 </div>
             </section>
             <section class="s2">
                 <h1>Thai Food</h1>
-                <div class="container">
-                    <div class="d d1">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/thai/seafood.jpg" alt="seafood">
-                    </div>
-                    <div class="d d2">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/thai/thai_curry.jpg"
-                            alt="thai_curry">
-                    </div>
-                    <div class="d d3">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/thai/thai_noodles.jpg"
-                            alt="thai_noodles">
-                    </div>
-                    <div class="d d4">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/thai/tom_yum_soup.jpg"
-                            alt="tom_yum_soup">
-                    </div>
+                <div class="container container_2">
+
                 </div>
             </section>
             <section class="s3">
                 <h1>Italian Food</h1>
-                <div class="container">
-                    <div class="d d1">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/italian/garlic_bread.jpg"
-                            alt="garlic_bread">
-                    </div>
-                    <div class="d d2">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/italian/pasta.jpg" alt="pasta">
-                    </div>
-                    <div class="d d3">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/italian/pizza.jpg" alt="pizza">
-                    </div>
-                    <div class="d d4">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/italian/spaghetti.jpg"
-                            alt="spaghetti">
-                    </div>
+                <div class="container container_3">
+
                 </div>
             </section>
             <section class="s4">
                 <h1>American Food</h1>
-                <div class="container">
-                    <div class="d d1">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/american/burger.jpg" alt="burger">
-                    </div>
-                    <div class="d d2">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/american/cake.jpg" alt="cake">
-                    </div>
-                    <div class="d d3">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/american/fries.jpg" alt="fries">
-                    </div>
-                    <div class="d d4">
-                        <img src="/Users/joykumra/Downloads/Restuarant project/imgs/american/hot_dog.jpg" alt="hot_dog">
-                    </div>
+                <div class="container container_4">
+
                 </div>
             </section>
 
         </main>
         <footer></footer>
     </div>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                method: 'GET',
+                url: 'https://my-json-server.typicode.com/joykumra/Restuarant-project/food',
+                dataType: 'json'
+
+            }).done(function (data) {
+
+                $.map(data, function (item, i) {
+                    if (item.category === "Indian") {
+                        $('.container_1').append($('.container_1').append('<div class = d d1><img src = ' + item.image + ' alt = ' + item.name + '></div>'));
+                    } else if (item.category === "Thai") {
+                        $('.container').append($('.container_2').append('<div class = d d1><img src = ' + item.image + ' alt = ' + item.name + '></div>'));
+                    } else if (item.category === "Italian") {
+                        $('.container').append($('.container_3').append('<div class = d d1><img src = ' + item.image + ' alt = ' + item.name + '></div>'));
+                    } else if (item.category === "American") {
+                        $('.container_4').append($('.container_4').append('<div class = d d1><img src = ' + item.image + ' alt = ' + item.name + '></div>'));
+                    }
+                })
+            })
+
+        });
+    </script>
 </body>
 
 </html>
