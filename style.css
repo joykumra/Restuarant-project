@@ -12,16 +12,77 @@ body {
   font-family: Avenir-Roman, sans-serif;
   margin: 0;
   padding: 0;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 main {
-  margin: 10px;
+  margin: 30px 20px;
 }
 
 h1 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px 20px;
+  border-bottom: 1px solid #ababab;
+  background: #fff1f1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: rgb(248, 167, 67);
+}
+
+header span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header i {
+  padding-right: 10px;
+}
+
+header input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  color: #040714;
+  background-color: transparent;
+}
+
+header a {
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin-right: 20px;
+  color: black;
+  background-color: rgb(215, 215, 215);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  border-top: 1px solid #ababab;
+  background: #fff1f1;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 .s {
@@ -58,4 +119,95 @@ h1 {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+.location,
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  border: 1px solid black;
+  padding: 10px;
+  margin-right: 60px;
+}
+
+.location p {
+  margin: 0;
+}
+
+.search {
+  border: 1px solid black;
+  padding: 5px 10px;
+  height: 30px;
+  margin-right: 60px;
+  border-radius: 20px;
+  width: 400px;
+}
+
+.footer_left {
+  display: flex;
+  align-items: center;
+}
+
+.footer_left ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer_left ul li {
+  margin-right: 20px;
+}
+
+.footer_right {
+  display: flex;
+  align-items: center;
+}
+
+.footer_right p {
+  margin-right: 20px;
+}
+
+.footer_right p:hover,
+.footer_left ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .s h1 {
+    text-align: center;
+  }
+
+  .items {
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+
+  .footer_left {
+    margin: 0 auto;
+  }
+
+  .footer_right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .location {
+    display: none;
+  }
+
+  .footer_left p {
+    display: none;
+  }
 }
