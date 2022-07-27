@@ -112,6 +112,10 @@ footer {
   cursor: pointer;
 }
 
+.items:hover .name {
+  display: block;
+}
+
 .items img {
   position: absolute;
   inset: 0;
@@ -173,6 +177,23 @@ footer {
 .footer_left ul li:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.name {
+  z-index: 9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #efeded;
+  background-color: #929292a2;
+  width: 150px;
+  padding: 5px 0px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bolder;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {

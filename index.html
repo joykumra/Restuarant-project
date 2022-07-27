@@ -76,13 +76,13 @@
 
                 $.map(data, function (item, i) {
                     if (item.category === "Indian") {
-                        $('.container_1').append($('.container_1').append('<div class = items items_1><img src = ' + item.image + ' alt = ' + item.name + '></div>'));
+                        $('.container_1').append($('.container_1').append('<div class = items items_1><img src = ' + item.image + ' alt = ' + item.name + '><p class = name>' + item.name + '</p></div>'));
                     } else if (item.category === "Thai") {
-                        $('.container').append($('.container_2').append('<div class = items items_2><img src = ' + item.image + ' alt = ' + item.name + '></div>'));
+                        $('.container').append($('.container_2').append('<div class = items items_2><img src = ' + item.image + ' alt = ' + item.name + '><p class = name>' + item.name + '</p></div>'));
                     } else if (item.category === "Italian") {
-                        $('.container').append($('.container_3').append('<div class = items items_3><img src = ' + item.image + ' alt = ' + item.name + '></div>'));
+                        $('.container').append($('.container_3').append('<div class = items items_3><img src = ' + item.image + ' alt = ' + item.name + '><p class = name>' + item.name + '</p></div>'));
                     } else if (item.category === "American") {
-                        $('.container_4').append($('.container_4').append('<div class = items items_4><img src = ' + item.image + ' alt = ' + item.name + '></div>'));
+                        $('.container_4').append($('.container_4').append('<div class = items items_4><img src = ' + item.image + ' alt = ' + item.name + '><p class = name>' + item.name + '</p></div>'));
                     }
                 })
             })

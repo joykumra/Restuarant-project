@@ -28,7 +28,7 @@
     },
     {
       "id": 2,
-      "name": "pasta",
+      "name": "Pasta",
       "price": "7.00",
       "description": "Pasta is a type of food typically made from an unleavened dough of durum wheat flour, traditionally mixed with water or eggs, and formed into sheets or other shapes, then cooked by baking or boiling.",
       "image": "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -68,7 +68,7 @@
 
     {
       "id": 5,
-      "name": "pancakes",
+      "name": "Pancakes",
       "price": "5.00",
       "description": "Pancakes are a type of food typically made with a flat, round, pancake-like dough, which is then fried at a high temperature, traditionally in a hot buttermilk sauce.",
       "image": "https://images.pexels.com/photos/718739/pexels-photo-718739.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -94,7 +94,7 @@
     },
     {
       "id": 7,
-      "name": "hotdog",
+      "name": "Hotdog",
       "price": "3.00",
       "description": "A hotdog is a food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun",
       "image": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=800",
