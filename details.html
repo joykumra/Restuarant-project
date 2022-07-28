@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/45fce7dc5c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1><span>AZ</span> FOODS</h1>
+        </div>
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>100 W 49th Ave, Vancouver, BC V5Y 2Z6</p>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search food, restaurants, category, etc">
+        </div>
+        <a href="">Login</a>
+        <a href="">Signup</a>
+    </header>
+
+    <section class="detail"></section>
+
+    <footer>
+        <div class="footer_left">
+            <p>&#169; 2022, AZ Foods, Inc. </p>
+            <ul>
+                <li>Privacy</li>
+                <li>Terms</li>
+                <li>Food</li>
+                <li>Restaurants</li>
+            </ul>
+        </div>
+        <div class="footer_right">
+            <p>English (CA)</p>
+            <p>Support and Resources</p>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                method: 'GET',
+                url: 'https://my-json-server.typicode.com/joykumra/Restuarant-project/food',
+                dataType: 'json'
+
+            }).done(function (data) {
+                var id = window.location.href.split('=')[1];
+                console.log(id);
+
+                $.map(data, function (item, i) {
+                    if (item.id == Number(id)) {
+                        $('.detail').append(`
+                        <div class="text">
+                            <div class="img">
+                                <img src="${item.image}" alt=${item.name}>
+                            </div>
+                            <div class="info">
+                                <span>${item.category} cuisine</span>
+                                <h2>${item.name}</h2>
+                                <div class="rating">
+                                    <p>${item.rating}</p>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="description">${item.description}</p>
+                            </div>
+                        </div>
+                        `);
+                    }
+                })
+            })
+
+        });
+    </script>
+</body>
+
+</html>
