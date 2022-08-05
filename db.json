@@ -56,7 +56,7 @@
       "id": 4,
       "name": "Burger",
       "price": "6.00",
-      "description": "A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.",
+      "description": "A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, locationd inside a sliced bread roll or bun.",
       "image": "https://images.pexels.com/photos/4676441/pexels-photo-4676441.jpeg?auto=compress&cs=tinysrgb&w=800",
       "category": "American",
       "restaurant": "Burger King",
